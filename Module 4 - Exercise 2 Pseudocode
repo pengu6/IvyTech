@@ -1,0 +1,18 @@
+target = "logic"
+low = first_page
+high = last_page
+
+while low <= high:
+    mid = (low + high) // 2      
+    word = get_first_word(mid)     
+
+    if word == target:
+        PRINT("Found:", word, "on page", mid)
+        break
+    else if word < target:         
+        low = mid + 1           
+    else:                          
+        high = mid - 1         
+
+if low > high:
+    PRINT("Word not found in dictionary")
