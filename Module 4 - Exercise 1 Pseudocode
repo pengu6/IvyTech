@@ -1,0 +1,16 @@
+
+secret = RANDOM_NUMBER(1, 100)   
+
+repeat:
+    guess = INPUT("Enter your guess (1-100): ")
+    if guess < 1 or guess > 100:
+        PRINT("Please enter a number between 1 and 100.")
+        continue
+    if guess < secret:
+        PRINT("Too low.")
+    else if guess > secret:
+        PRINT("Too high.")
+    else:
+        PRINT("Correct! You guessed it.")
+        break
+end repeat
